@@ -1,8 +1,21 @@
-char *ft_strcpy(char *s1, const char *s2)
-{
-    char *s;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hcastanh <hcastanh@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/08 09:38:35 by hcastanh          #+#    #+#             */
+/*   Updated: 2020/05/08 09:41:08 by hcastanh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    s = s1;
-    while ((*s++ = *s2++) != 0)	;
-    return (s1);
+char	*ft_strcpy(char *s1, const char *s2)
+{
+	char *s;
+
+	s = s1;
+	while ((*s++ = *s2++) != 0)
+		continue;
+	return (s1);
 }

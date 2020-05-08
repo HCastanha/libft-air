@@ -6,16 +6,14 @@
 /*   By: hcastanh <hcastanh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 02:31:55 by hcastanh          #+#    #+#             */
-/*   Updated: 2020/05/04 22:16:48 by hcastanh         ###   ########.fr       */
+/*   Updated: 2020/05/08 09:35:00 by hcastanh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	
-
 	if (n == (int)0x80000000)
 		ft_putstr_fd("-2147483648", fd);
 	else

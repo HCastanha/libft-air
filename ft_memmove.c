@@ -1,43 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hcastanh <hcastanh@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/08 00:23:40 by hcastanh          #+#    #+#             */
+/*   Updated: 2020/05/08 00:29:44 by hcastanh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char   *from;
-	unsigned char   *to;
+	unsigned char	*from;
+	unsigned char	*to;
 	size_t			i;
 
-	from = (unsigned char*) src;
-	to = (unsigned char*) dst;
+	from = (unsigned char*)src;
+	to = (unsigned char*)dst;
 	if (from == to || len <= 0)
-		return to;
-	if (to > from && to-from < (int)len)
+		return (to);
+	if (to > from && (to - from) < (int)len)
 	{
-		/* to overlaps with from */
-		/*  <from......>         */
-		/*         <to........>  */
-		/* copy in reverse, to avoid overwriting from */
 		i = len - 1;
 		while (i >= 0 && *from)
 		{
 			to[i] = from[i];
 			i--;
 		}
-		return dst;
+		return (dst);
 	}
-	if (from > to && from-to < (int)len)
+	if (from > to && (from - to) < (int)len)
 	{
-		/* to overlaps with from */
-		/*        <from......>   */
-		/*  <to........>         */
-		/* copy forwards, to avoid overwriting from */
 		i = 0;
-		while(i < len && *to)
+		while (i < len && *to)
 		{
 			to[i] = from[i];
 			i++;
 		}
-		return dst;
+		return (dst);
 	}
 	ft_memcpy(dst, src, len);
-	return dst;
+	return (dst);
 }

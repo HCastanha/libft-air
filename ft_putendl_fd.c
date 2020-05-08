@@ -6,14 +6,14 @@
 /*   By: hcastanh <hcastanh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/19 16:30:31 by esilva-s          #+#    #+#             */
-/*   Updated: 2020/04/26 03:07:29 by hcastanh         ###   ########.fr       */
+/*   Updated: 2020/05/08 09:33:09 by hcastanh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    ft_putstr_fd(s, fd);
-    ft_putchar_fd('\n', fd);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

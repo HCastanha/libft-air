@@ -6,7 +6,7 @@
 /*   By: hcastanh <hcastanh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 03:42:29 by hcastanh          #+#    #+#             */
-/*   Updated: 2020/05/02 12:10:56 by hcastanh         ###   ########.fr       */
+/*   Updated: 2020/05/08 11:38:28 by hcastanh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != 0 && *s != (char)c)
+	while (*s != 0 && *s != c)
 		s++;
 	if (c == 0 || *s == c)
 		return ((char *)s);

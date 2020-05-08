@@ -6,7 +6,7 @@
 /*   By: hcastanh <hcastanh@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 13:38:49 by hcastanh          #+#    #+#             */
-/*   Updated: 2020/05/07 00:56:58 by hcastanh         ###   ########.fr       */
+/*   Updated: 2020/05/07 23:13:05 by hcastanh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,14 @@ char	*ft_itoa(int n)
 		n_cpy = n_cpy / 10;
 		i++;
 	}
-	n_cpy = n;
-	if (n <= 0)
+	if ((n_cpy = n) <= 0)
 		i++;
-	s = (char *)malloc(sizeof(char) * (i + 1));
-	if (s == NULL)
-		return (NULL);
-
+	if ((s = (char *)malloc(sizeof(char) * (i + 1))) == 0)
+		return (0);
 	s[i] = '\0';
 	while (i--)
 	{
-		s[i] = (n_cpy % 10);
-		s[i] *= ((n_cpy < 0) ? -1 : 1);
-		s[i] += '0';
+		s[i] = ((n_cpy < 0) ? -1 : 1) * (n_cpy % 10) + '0';
 		n_cpy /= 10;
 	}
 	if (n < 0)
